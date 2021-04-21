@@ -1,26 +1,32 @@
-import { StyleSheet } from 'react-native'
+import { Dimensions, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     Container:{
-      flex: 1,
-      alignItems: 'center',
+     flex: 1,
+      alignItems: 'center'
+    },
+    ContainerKeyboard:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 10
     },
     img:{
-        width: 259,
-        height: 150,
-        marginVertical: '15%',
+        width: 230,
+        height: 133,
     },
     text:{
         color: '#fff',
         fontSize: 19,
         fontWeight: 'bold',
-        marginBottom: 10
+        marginTop: '8%',
+        marginBottom: 15
     },
     input:{
         borderWidth: 1,
         borderRadius: 5,
         backgroundColor: '#fff',
-        width: '85%',
+        width: 300,
         height: 45,
         fontSize: 16,
         paddingLeft: 15
@@ -35,15 +41,15 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff',
         borderRadius: 3,
-        marginVertical: '12%'
+        marginTop: '10%',
+        marginBottom: '5%'
     },
     ContainerCreateUser:{
-        alignItems: 'center',
-        flexDirection: 'row'
+       alignItems: 'center',
+       flexDirection: 'row',
+       marginBottom: '5%'
     },
     textLink:{
-        alignItems: 'center',
-        justifyContent: 'center',
         color: '#fff',
         fontSize: 18,
         fontStyle: 'italic'
@@ -52,7 +58,7 @@ const styles = StyleSheet.create({
         color: '#B40486',
         fontSize: 23,
         fontWeight: 'bold',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
     }
 })
 
