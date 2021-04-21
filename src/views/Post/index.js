@@ -8,6 +8,21 @@ import Navigation from '../../components/Navigation'
 import wallpaper from '../../assets/wallpaper.png'
 
 function Login({navigation}){
+        function handleHome(){
+            navigation.navigate('Home')
+        }
+        function handleUserProfile(){
+            navigation.navigate('UserProfile')
+        }
+        function handlePost(){
+            navigation.navigate('Post')
+        }
+        function handleLogin(){
+            navigation.navigate('Login')
+        }
+        function handleCreateProfile(){
+            navigation.navigate('CreateProfile')
+        }
     return(
         <View style={styles.Container}>
             <Header/>
@@ -29,7 +44,13 @@ function Login({navigation}){
             <TouchableOpacity style={styles.textButtonCaption}>
                     <Text style={styles.textButton}>Postar</Text>
                 </TouchableOpacity>
-            <Navigation/>
+                <Navigation 
+                    Home={handleHome} 
+                    User={handleUserProfile}
+                    Post={handlePost}
+                    Login={handleLogin}
+                    Create={handleCreateProfile}  
+                />
         </View>
     )
 }

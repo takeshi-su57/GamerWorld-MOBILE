@@ -22,6 +22,22 @@ export default function Home({navigation}) {
     navigation.navigate('UserProfile')
   }
 
+  function handleHome(){
+    navigation.navigate('Home')
+  }
+  function handleUserProfile(){
+    navigation.navigate('UserProfile')
+  }
+  function handlePost(){
+    navigation.navigate('Post')
+  }
+  function handleLogin(){
+    navigation.navigate('Login')
+  }
+  function handleCreateProfile(){
+    navigation.navigate('CreateProfile')
+  }
+
   return (
     <View style={styles.Container}>
       <Header/>
@@ -30,7 +46,14 @@ export default function Home({navigation}) {
           <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>
           <Feed avatar={hermione} post={handson} name={"Erika Souza"} caption={"Hadson <3"}/>
         </ScrollView>
-      <Navigation/>
+
+      <Navigation 
+        Home={handleHome} 
+        User={handleUserProfile}
+        Post={handlePost}
+        Login={handleLogin}
+        Create={handleCreateProfile}  
+      />
     </View>
   )
 }

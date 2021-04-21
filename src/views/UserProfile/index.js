@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, ScrollView} from 'react-native'
 import styles from './styles'
 
 import Header from '../../components/header'
-import Nav from '../../components/Navigation'
+import Navigation from '../../components/Navigation'
 
 import Avatar from '../../assets/isis.png'
 import customer from '../../assets/customer.png'
@@ -13,7 +13,7 @@ import destiny from '../../assets/destiny.jpg'
 import pen from '../../assets/pen.png'
 import dlt from '../../assets/delete.png'
 
-function UserProfile(){
+function UserProfile({navigation}){
     const [users, setUsers] = useState(100)
     const [follow, setFollow] = useState('Seguir')
 
@@ -25,6 +25,22 @@ function UserProfile(){
             setFollow('Seguir')
             setUsers(users - 1)
         }
+    }
+
+    function handleHome(){
+        navigation.navigate('Home')
+    }
+    function handleUserProfile(){
+        navigation.navigate('UserProfile')
+    }
+    function handlePost(){
+        navigation.navigate('Post')
+    }
+    function handleLogin(){
+        navigation.navigate('Login')
+    }
+    function handleCreateProfile(){
+        navigation.navigate('CreateProfile')
     }
 
     return(
@@ -77,7 +93,13 @@ function UserProfile(){
                         </View>
                     </View>
                 </ScrollView>
-            <Nav/>
+                <Navigation 
+                    Home={handleHome} 
+                    User={handleUserProfile}
+                    Post={handlePost}
+                    Login={handleLogin}
+                    Create={handleCreateProfile}  
+                />
         </View>
     )
 }
