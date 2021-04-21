@@ -11,9 +11,6 @@ function Login({navigation}){
         function handleHome(){
             navigation.navigate('Home')
         }
-        function handleUserProfile(){
-            navigation.navigate('UserProfile')
-        }
         function handlePost(){
             navigation.navigate('Post')
         }
@@ -46,7 +43,6 @@ function Login({navigation}){
                 </TouchableOpacity>
                 <Navigation 
                     Home={handleHome} 
-                    User={handleUserProfile}
                     Post={handlePost}
                     Login={handleLogin}
                     Create={handleCreateProfile}  

@@ -25,9 +25,6 @@ export default function Home({navigation}) {
   function handleHome(){
     navigation.navigate('Home')
   }
-  function handleUserProfile(){
-    navigation.navigate('UserProfile')
-  }
   function handlePost(){
     navigation.navigate('Post')
   }
@@ -49,7 +46,6 @@ export default function Home({navigation}) {
 
       <Navigation 
         Home={handleHome} 
-        User={handleUserProfile}
         Post={handlePost}
         Login={handleLogin}
         Create={handleCreateProfile}  

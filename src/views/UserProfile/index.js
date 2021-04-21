@@ -30,9 +30,6 @@ function UserProfile({navigation}){
     function handleHome(){
         navigation.navigate('Home')
     }
-    function handleUserProfile(){
-        navigation.navigate('UserProfile')
-    }
     function handlePost(){
         navigation.navigate('Post')
     }
@@ -95,7 +92,6 @@ function UserProfile({navigation}){
                 </ScrollView>
                 <Navigation 
                     Home={handleHome} 
-                    User={handleUserProfile}
                     Post={handlePost}
                     Login={handleLogin}
                     Create={handleCreateProfile}  
