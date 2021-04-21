@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         paddingLeft: 30
     },
      Icon:{
-        width:30,
+        width:31,
         height: 30
      },
      PhotoProfile:{

@@ -55,7 +55,10 @@ function UserProfile({navigation}){
                         </TouchableOpacity>
                         <View style={styles.ContainerCustomer}>
                             <Image style={styles.ImgCustomer} source={customer}/>
-                            <Text style={styles.TextCustomer}>{users}</Text>
+                            <Text style={styles.TextCustomer}>
+                                {follow == 'Seguir' ? '' : '+ '}
+                                {users}
+                            </Text>
                         </View>
                     </View>
 
