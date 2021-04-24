@@ -34,6 +34,9 @@ export default function Home({navigation}) {
   function handleCreateProfile(){
     navigation.navigate('CreateProfile')
   }
+  function handleProfile(){
+    navigation.navigate('Profile')
+  }
 
   return (
     <View style={styles.Container}>
@@ -49,6 +52,7 @@ export default function Home({navigation}) {
         Post={handlePost}
         Login={handleLogin}
         Create={handleCreateProfile}  
+        Profile={handleProfile}
       />
     </View>
   )

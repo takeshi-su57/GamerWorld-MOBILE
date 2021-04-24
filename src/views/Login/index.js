@@ -21,7 +21,7 @@ function Login({navigation}){
         <ScrollView contentContainerStyle={styles.Container}>
           <Header/>
             <KeyboardAvoidingView 
-            style={styles.ContainerKeyboard}
+                style={styles.ContainerKeyboard}
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
                    
                         <Image style={styles.img} source={gamer}/>
