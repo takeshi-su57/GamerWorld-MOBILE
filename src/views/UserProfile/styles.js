@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     },
 
     ContainerScrollView:{
-        marginBottom: 50
+        
     },
 
     ContainerAvatar:{
@@ -45,9 +45,21 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
-        width: 130,
-        height: 30,
+        width: 140,
+        height: 35,
         backgroundColor: '#FE2EC8',
+        borderWidth: 1,
+        borderColor: '#fff',
+        borderRadius: 5,
+    },
+
+    buttonUnFollow:{
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        width: 140,
+        height: 35,
+        backgroundColor: '#FF8000',
         borderWidth: 1,
         borderColor: '#fff',
         borderRadius: 5,

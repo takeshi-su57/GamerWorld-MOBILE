@@ -6,13 +6,20 @@ import qrcode from '../../assets/qrcode.png'
 import logo from '../../assets/logoPurple.png'
 import sunny from '../../assets/sunny.png'
 
-function Header(){
+function Header({back, img}){
     return(
         <View style={styles.Container}>
-            <TouchableOpacity>
-                <Image source={qrcode} style={styles.Icon}/>
-            </TouchableOpacity>
-            
+            {
+                back ?
+                <TouchableOpacity onPress={back}>
+                    <Image source={img} style={styles.Icon}/>
+                </TouchableOpacity>
+                :
+                <TouchableOpacity onPress={back}>
+                    <Image source={qrcode} style={styles.Icon}/>
+                </TouchableOpacity>
+            }
+        
             <Image source={logo} style={styles.Logo}/>
             
             <TouchableOpacity>

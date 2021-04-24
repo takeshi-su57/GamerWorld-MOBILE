@@ -12,37 +12,29 @@ import nfs from '../../assets/Nfs.jpg'
 import destiny from '../../assets/destiny.jpg'
 import pen from '../../assets/pen.png'
 import dlt from '../../assets/delete.png'
+import arrowLeft from '../../assets/arrowLeft.png'
 
 function UserProfile({navigation}){
     const [users, setUsers] = useState(100)
-    const [follow, setFollow] = useState('Seguir')
+    const [follow, setFollow] = useState('Deixar de seguir')
 
     function Follow(){
-        if(follow == 'Seguir'){
-            setFollow('Deixar de seguir')
-            setUsers(users + 1)
-        }else{
+        if(follow == 'Deixar de seguir'){
             setFollow('Seguir')
             setUsers(users - 1)
+        }else{
+            setFollow('Deixar de seguir')
+            setUsers(users + 1)
         }
     }
 
-    function handleHome(){
+    function Back(){
         navigation.navigate('Home')
-    }
-    function handlePost(){
-        navigation.navigate('Post')
-    }
-    function handleLogin(){
-        navigation.navigate('Login')
-    }
-    function handleCreateProfile(){
-        navigation.navigate('CreateProfile')
     }
 
     return(
         <View style={styles.Container}>
-            <Header/>
+            <Header back={Back} img={arrowLeft}/>
                 <ScrollView style={styles.ContainerScrollView}>
                     <View style={styles.ContainerAvatar}>
                         <Image style={styles.avatar} source={Avatar}/>
@@ -50,13 +42,16 @@ function UserProfile({navigation}){
                     </View>
 
                     <View style={styles.ContainerFollow}>
-                        <TouchableOpacity style={styles.buttonFollow} onPress={Follow}>
+                        <TouchableOpacity style={
+                            follow != 'Deixar de seguir' ? styles.buttonUnFollow : styles.buttonFollow}
+                            onPress={Follow}>
+
                             <Text style={styles.textFollow}>{follow}</Text>
                         </TouchableOpacity>
-                        <View style={styles.ContainerCustomer}>
+                        <View style={styles.ContainerCustomer }>
                             <Image style={styles.ImgCustomer} source={customer}/>
                             <Text style={styles.TextCustomer}>
-                                {follow == 'Seguir' ? '' : '+ '}
+                                {follow == 'Seguir' ? '-' : ''}
                                 {users}
                             </Text>
                         </View>
@@ -93,12 +88,6 @@ function UserProfile({navigation}){
                         </View>
                     </View>
                 </ScrollView>
-                <Navigation 
-                    Home={handleHome} 
-                    Post={handlePost}
-                    Login={handleLogin}
-                    Create={handleCreateProfile}  
-                />
         </View>
     )
 }
