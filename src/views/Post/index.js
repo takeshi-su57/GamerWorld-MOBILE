@@ -20,6 +20,9 @@ function Login({navigation}){
         function handleCreateProfile(){
             navigation.navigate('CreateProfile')
         }
+        function handleProfile(){
+            navigation.navigate('Profile')
+        }
     return(
         <View style={styles.Container}>
             <Header/>
@@ -45,7 +48,8 @@ function Login({navigation}){
                     Home={handleHome} 
                     Post={handlePost}
                     Login={handleLogin}
-                    Create={handleCreateProfile}  
+                    Create={handleCreateProfile} 
+                    Profile={handleProfile}
                 />
         </View>
     )
