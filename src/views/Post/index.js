@@ -23,6 +23,10 @@ function Login({navigation}){
         function handleProfile(){
             navigation.navigate('Profile')
         }
+        function handleActivity(){
+            navigation.navigate('Activity')
+        }
+        
     return(
         <View style={styles.Container}>
             <Header/>
@@ -50,6 +54,7 @@ function Login({navigation}){
                     Login={handleLogin}
                     Create={handleCreateProfile} 
                     Profile={handleProfile}
+                    Activity={handleActivity}
                 />
         </View>
     )

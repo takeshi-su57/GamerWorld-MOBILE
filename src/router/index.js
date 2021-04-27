@@ -6,9 +6,8 @@ import Login from '../views/Login'
 import CreateProfile from '../views/CreateProfile'
 import Post from '../views/Post'
 import UserProfile from '../views/UserProfile'
-import Profile from '../views/Profile'/*
-/*
-import Activity from '../views/Activity'*/
+import Profile from '../views/Profile'
+import Activity from '../views/Activity'
 
 const Router = createAppContainer(
     createSwitchNavigator({
@@ -17,9 +16,8 @@ const Router = createAppContainer(
         Post,
         Login,
         CreateProfile,
-        Profile
-        /*,
-        Activity*/
+        Profile,
+        Activity
     })
 )
 

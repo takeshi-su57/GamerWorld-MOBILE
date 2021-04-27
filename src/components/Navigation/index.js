@@ -8,7 +8,7 @@ import plus from '../../assets/plus.png'
 import photoProfile from '../../assets/photoProfile.png'
 import back from '../../assets/back.png'
 
-function Nav({Home, Post, Login, Profile}){
+function Nav({Home, Post, Login, Profile, Activity}){
     return(
         <View style={styles.Container}>
             <TouchableOpacity onPress={Home}>
@@ -16,7 +16,7 @@ function Nav({Home, Post, Login, Profile}){
             </TouchableOpacity>
             <Text style={styles.Afstand}/>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={Activity}>
                 <Image style={styles.Icon} source={heartWhite}/>
             </TouchableOpacity>
             <Text style={styles.Afstand}/>

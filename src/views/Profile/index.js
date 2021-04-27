@@ -27,6 +27,9 @@ function Profile({navigation}){
     function handleCreateProfile(){
         navigation.navigate('CreateProfile')
     }
+    function handleActivity(){
+        navigation.navigate('Activity')
+    }
 
     return(
         <View style={styles.Container}>
@@ -87,7 +90,8 @@ function Profile({navigation}){
                     Home={handleHome} 
                     Post={handlePost}
                     Login={handleLogin}
-                    Create={handleCreateProfile}  
+                    Create={handleCreateProfile} 
+                    Activity={handleActivity}
                 />
         </View>
     )

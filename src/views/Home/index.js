@@ -37,6 +37,9 @@ export default function Home({navigation}) {
   function handleProfile(){
     navigation.navigate('Profile')
   }
+  function handleActivity(){
+    navigation.navigate('Activity')
+  }
 
   return (
     <View style={styles.Container}>
@@ -53,6 +56,7 @@ export default function Home({navigation}) {
         Login={handleLogin}
         Create={handleCreateProfile}  
         Profile={handleProfile}
+        Activity={handleActivity}
       />
     </View>
   )
