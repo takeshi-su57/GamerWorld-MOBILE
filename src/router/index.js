@@ -11,10 +11,10 @@ import Activity from '../views/Activity'
 
 const Router = createAppContainer(
     createSwitchNavigator({
+        Login,
         Home,
         UserProfile,
         Post,
-        Login,
         CreateProfile,
         Profile,
         Activity
