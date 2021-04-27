@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
         View, 
         Text, 
@@ -7,8 +7,8 @@ import {
         TouchableOpacity,
         KeyboardAvoidingView,
         Platform,
-        SafeAreaView,
-        ScrollView
+        ScrollView,
+        Alert
 } from 'react-native'
 
 import styles from './styles'
@@ -17,6 +17,16 @@ import Header from '../../components/header'
 import gamer from '../../assets/gamerWomanMan.png'
 
 function Login({navigation}){
+    const[input, setInput] = useState()
+
+    function Enter(){
+        if(!input){
+            Alert.alert("Como posso te chamar? 😢")
+        }else{
+            navigation.navigate('Home')
+        }
+    }
+
     return(
         <ScrollView contentContainerStyle={styles.Container}>
           <Header/>
@@ -30,8 +40,10 @@ function Login({navigation}){
                             style={styles.input}
                             placeholder="Digite aqui..."
                             placeholderTextColor="#585858"
+                            value={input}
+                            onChange={setInput}
                         />
-                        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.button}>
+                        <TouchableOpacity onPress={Enter} style={styles.button}>
                             <Text style={styles.text}>Login</Text>
                         </TouchableOpacity>
 
