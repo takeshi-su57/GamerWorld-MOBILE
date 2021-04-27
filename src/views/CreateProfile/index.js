@@ -26,7 +26,8 @@ function CreateProfile({navigation}){
             Alert.alert("Idade é obrigatório!")
         }
         else{
-            navigation.navigate("Login")
+            navigation.navigate("Home")
+            Alert.alert("Parabéns, perfil criado com sucesso! 😁")
         }
     }
 
