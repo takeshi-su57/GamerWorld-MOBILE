@@ -14,7 +14,7 @@ function CreateProfile({navigation}){
 
     function Create(){    
         if(!name){
-            setAlert("Nome é obrigatório! 😕")
+            setAlert("Nome é obrigatório! 😐")
         }
         else if(!surname){
             setAlert("Sobrenome é obrigatório! 🙄")
@@ -25,9 +25,12 @@ function CreateProfile({navigation}){
         else if(!age){
             setAlert("Idade é obrigatório! 🤯")
         }
-        else{
+        else if(age < 16){
+            setAlert("Você precisa ser maior de 16 anos! 😕")
+        }
+        else{   
             navigation.navigate("Home")
-            Alert.alert("Parabéns, perfil criado com sucesso! 😁")
+            Alert.alert("Parabéns", "perfil criado com sucesso! 😁")
         }
     }
 
