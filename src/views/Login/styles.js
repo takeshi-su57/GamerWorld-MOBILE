@@ -6,12 +6,14 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     ContainerAlert:{
-        marginTop: '10%',
+        width: '100%',
+        height: 48,
     },
     textAlert:{
         fontSize: 22,
         color: '#fff',
         textAlign: 'center',
+        marginTop: 3
     },
     ContainerKeyboard:{
         flex: 1,

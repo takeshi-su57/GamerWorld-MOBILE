@@ -11,6 +11,7 @@ import {
         Alert
 } from 'react-native'
 
+import { LinearGradient } from 'expo-linear-gradient'
 import styles from './styles'
 import gamer from '../../assets/gamerWomanMan.png'
 
@@ -28,9 +29,16 @@ function Login({navigation}){
 
     return(
         <ScrollView contentContainerStyle={styles.Container}>
-            <View style={styles.ContainerAlert}>
-                <Text style={styles.textAlert}>{alert}</Text>
-            </View>
+            {   alert &&
+                <LinearGradient
+                    colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
+                    style={styles.ContainerAlert}
+                >
+                    <Text style={styles.textAlert}>{alert}</Text>
+                </LinearGradient>
+            }
+                
+            
             <KeyboardAvoidingView 
                 style={styles.ContainerKeyboard}
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
