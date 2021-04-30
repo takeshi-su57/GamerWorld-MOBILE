@@ -54,10 +54,11 @@ const styles = StyleSheet.create({
         fontStyle: 'italic'
     },
     textLinkPurple:{
-        color: '#B40486',
+        color: '#B404AE',
         fontSize: 23,
         fontWeight: 'bold',
         fontStyle: 'italic',
+        textDecorationLine: 'underline'
     }
 })
 

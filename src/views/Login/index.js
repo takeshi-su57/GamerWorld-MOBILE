@@ -47,9 +47,9 @@ function Login({navigation}){
                         </TouchableOpacity>
 
                         <View style={styles.ContainerCreateUser}>
-                            <Text style={styles.textLink}>Criar conta</Text>
+                            <Text style={styles.textLink}>Criar conta </Text>
                             <TouchableOpacity onPress={() => navigation.navigate('CreateProfile')}>
-                                <Text style={styles.textLinkPurple}> aqui!</Text>
+                                <Text style={styles.textLinkPurple}>aqui!</Text>
                             </TouchableOpacity>
                         </View>   
                     
