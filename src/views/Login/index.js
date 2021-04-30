@@ -12,16 +12,15 @@ import {
 } from 'react-native'
 
 import styles from './styles'
-import Header from '../../components/header'
-
 import gamer from '../../assets/gamerWomanMan.png'
 
 function Login({navigation}){
     const[input, setInput] = useState()
+    const[alert, setAlert] = useState()
 
     function Enter(){
         if(!input){
-            Alert.alert("Como posso te chamar? 😢")
+            setAlert("Como posso te chamar? 😢")
         }else{
             navigation.navigate('Home')
         }
@@ -29,10 +28,12 @@ function Login({navigation}){
 
     return(
         <ScrollView contentContainerStyle={styles.Container}>
+            <View style={styles.ContainerAlert}>
+                <Text style={styles.textAlert}>{alert}</Text>
+            </View>
             <KeyboardAvoidingView 
                 style={styles.ContainerKeyboard}
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-                   
                         <Image style={styles.img} source={gamer}/>
                         <Text style={styles.text}>NickName: </Text>
                         <TextInput 

@@ -5,11 +5,18 @@ const styles = StyleSheet.create({
      flex: 1,
       alignItems: 'center'
     },
+    ContainerAlert:{
+        marginTop: '10%',
+    },
+    textAlert:{
+        fontSize: 22,
+        color: '#fff',
+        textAlign: 'center',
+    },
     ContainerKeyboard:{
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 10
+        justifyContent: 'center'
     },
     img:{
         width: 230,
@@ -46,12 +53,12 @@ const styles = StyleSheet.create({
     ContainerCreateUser:{
        alignItems: 'center',
        flexDirection: 'row',
-       marginBottom: '5%'
+       marginVertical: '10%',
     },
     textLink:{
         color: '#fff',
         fontSize: 18,
-        fontStyle: 'italic'
+        fontStyle: 'italic',    
     },
     textLinkPurple:{
         color: '#B404AE',
