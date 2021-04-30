@@ -30,7 +30,7 @@ function CreateProfile({navigation}){
         }
         else{   
             navigation.navigate("Home")
-            Alert.alert("Parabéns", "perfil criado com sucesso! 😁")
+            Alert.alert("Parabéns! 🥳", "Perfil criado com sucesso!")
         }
     }
 
