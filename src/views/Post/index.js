@@ -29,8 +29,6 @@ function Login({navigation}){
         
     return(
         <View style={styles.Container}>
-            <Header/>
-            
             <View style={styles.ContainerFile}>
                 <Image style={styles.img} source={wallpaper}/>
                 <TouchableOpacity style={styles.button}>

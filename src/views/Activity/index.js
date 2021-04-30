@@ -47,8 +47,6 @@ export default function Activity({navigation}){
 
     return(
         <View style={styles.Container}>
-            <Header/>
-
             <ScrollView contentContainerStyle={styles.ContainerLikes}>
                 <View style={styles.ContainerActivity}>
                     <Image source={crash} style={styles.avatar}/>

@@ -33,7 +33,6 @@ function Profile({navigation}){
 
     return(
         <View style={styles.Container}>
-            <Header/>
                 <ScrollView style={styles.ContainerScrollView}>
                     <View style={styles.ContainerAvatar}>
                         <Image style={styles.avatar} source={Avatar}/>

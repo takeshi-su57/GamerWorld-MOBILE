@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     Container:{
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     input:{
-        borderWidth: 1,
         borderRadius: 5,
         backgroundColor: '#fff',
         width: 300,

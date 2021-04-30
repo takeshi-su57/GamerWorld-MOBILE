@@ -34,7 +34,6 @@ function UserProfile({navigation}){
 
     return(
         <View style={styles.Container}>
-            <Header back={Back} img={arrowLeft}/>
                 <ScrollView style={styles.ContainerScrollView}>
                     <View style={styles.ContainerAvatar}>
                         <Image style={styles.avatar} source={Avatar}/>

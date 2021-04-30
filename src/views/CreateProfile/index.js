@@ -33,7 +33,6 @@ function CreateProfile({navigation}){
 
     return(
         <View style={styles.Container}>
-            <Header/>
             
             <View style={styles.ContainerAvatar}>
                 <Text style={styles.text}>Escolha seu avatar:</Text>

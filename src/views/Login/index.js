@@ -29,7 +29,6 @@ function Login({navigation}){
 
     return(
         <ScrollView contentContainerStyle={styles.Container}>
-          <Header/>
             <KeyboardAvoidingView 
                 style={styles.ContainerKeyboard}
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>

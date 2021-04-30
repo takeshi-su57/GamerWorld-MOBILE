@@ -3,10 +3,9 @@ import { View, Image, TouchableOpacity, StyleSheet} from 'react-native'
 
 import qrcode from '../../assets/qrcode.png'
 import logo from '../../assets/logoPurple.png'
-import sunny from '../../assets/sunny.png'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-function Header({back, img}){
+function Header({back, img, bcgd, time}){
     return(
         <View style={styles.Container}>
             {
@@ -22,8 +21,8 @@ function Header({back, img}){
         
             <Image source={logo} style={styles.Logo}/>
             
-            <TouchableOpacity>
-                <Image source={sunny} style={styles.Icon}/>
+            <TouchableOpacity onPress={bcgd}>
+                <Image source={time} style={styles.Icon}/>
             </TouchableOpacity>
         </View>
     )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View, ScrollView } from 'react-native'
 
 import Header from '../../components/header'
@@ -21,7 +21,6 @@ export default function Home({navigation}) {
   function UserProfile(){
     navigation.navigate('UserProfile')
   }
-
   function handleHome(){
     navigation.navigate('Home')
   }
@@ -43,7 +42,6 @@ export default function Home({navigation}) {
 
   return (
     <View style={styles.Container}>
-      <Header/>
         <ScrollView style={styles.feed}>
           <Feed avatar={isis} post={cod} name={"Ana Claudia"} caption={"Jogo maravilhoso!"} Profile={UserProfile}/>
           <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>

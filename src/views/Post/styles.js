@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     img:{
         width: 110,
-        height: 110,
+        height: 110.5,
         marginRight: 40
     },
     button:{
