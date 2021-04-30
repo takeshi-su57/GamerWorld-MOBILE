@@ -4,6 +4,16 @@ const styles = StyleSheet.create({
     Container:{
       flex: 1
     },
+    ContainerAlert:{
+      width: '100%',
+      height: 48,
+  },
+  textAlert:{
+      fontSize: 22,
+      color: '#fff',
+      textAlign: 'center',
+      marginTop: 3,
+  },
     ContainerAvatar:{
       alignItems: 'center',
       marginBottom: 30

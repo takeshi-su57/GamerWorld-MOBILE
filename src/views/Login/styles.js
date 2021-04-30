@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         color: '#fff',
         textAlign: 'center',
-        marginTop: 3
+        marginTop: 3,
     },
     ContainerKeyboard:{
         flex: 1,

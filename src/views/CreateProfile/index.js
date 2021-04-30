@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native'
 import styles from './styles'
-
-import Header from '../../components/header'
+import { LinearGradient } from 'expo-linear-gradient'
 
 import img from '../../utils'
 
@@ -11,19 +10,20 @@ function CreateProfile({navigation}){
     const[surname, setSurname] = useState()
     const[nickName, setNickName] = useState()
     const[age, setAge] = useState()
+    const[alert, setAlert] = useState()
 
-    function Create(){
+    function Create(){    
         if(!name){
-            Alert.alert("Nome é obrigatório!")
+            setAlert("Nome é obrigatório! 😕")
         }
         else if(!surname){
-            Alert.alert("Sobrenome é obrigatório!")
+            setAlert("Sobrenome é obrigatório! 🙄")
         }
         else if(!nickName){
-            Alert.alert("NickName é obrigatório!")
+            setAlert("NickName é obrigatório! 😤")
         }
         else if(!age){
-            Alert.alert("Idade é obrigatório!")
+            setAlert("Idade é obrigatório! 🤯")
         }
         else{
             navigation.navigate("Home")
@@ -33,7 +33,14 @@ function CreateProfile({navigation}){
 
     return(
         <View style={styles.Container}>
-            
+            {   alert &&
+                <LinearGradient
+                    colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
+                    style={styles.ContainerAlert}
+                >
+                    <Text style={styles.textAlert}>{alert}</Text>
+                </LinearGradient>
+            }
             <View style={styles.ContainerAvatar}>
                 <Text style={styles.text}>Escolha seu avatar:</Text>
                 <ScrollView 
@@ -58,7 +65,7 @@ function CreateProfile({navigation}){
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={name}
-                onChange={setName}
+                onChangeText={setName}
                 />
                 
                 <Text style={styles.textLabel}>Sobrenome: </Text>
@@ -67,7 +74,7 @@ function CreateProfile({navigation}){
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={surname}
-                onChange={setSurname}
+                onChangeText={setSurname}
                 />
                 
                 <Text style={styles.textLabel}>NickName: </Text>
@@ -76,7 +83,7 @@ function CreateProfile({navigation}){
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={nickName}
-                onChange={setNickName}
+                onChangeText={setNickName}
                 />
                 
                 <Text style={styles.textLabel}>Idade: </Text>
@@ -85,7 +92,7 @@ function CreateProfile({navigation}){
                 placeholder="+16"
                 placeholderTextColor="#A4A4A4"
                 value={age}
-                onChange={setAge}
+                onChangeText={setAge}
                 keyboardType='numeric'
                 />
 
