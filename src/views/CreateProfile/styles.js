@@ -47,10 +47,12 @@ const styles = StyleSheet.create({
       width: '100%',
       height: '100%',
       borderRadius: 3,
+      borderWidth: 1,
+      borderColor: '#fff',
       marginTop: 5,
       paddingLeft: 10,
       fontSize: 16,
-      color: '#fff'
+      color: '#fff',
     },
     AgeInput:{
       backgroundColor: '#585858',
@@ -59,7 +61,9 @@ const styles = StyleSheet.create({
       borderRadius: 3,
       marginTop: 5,
       paddingLeft: 10,
-      fontSize: 16
+      fontSize: 16,
+      borderWidth: 1,
+      borderColor: '#fff',
     },
     ContainerButton:{
       flexDirection: 'row',
