@@ -66,7 +66,7 @@ function CreateProfile({navigation}){
             <View style={styles.ContainerInputs}>
                 <Text style={styles.textLabel}>Nome: </Text>
                 <TextInput
-                style={styles.input}
+                style={alert ? styles.inputAlert : styles.input}
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={name}
@@ -75,7 +75,7 @@ function CreateProfile({navigation}){
                 
                 <Text style={styles.textLabel}>Sobrenome: </Text>
                 <TextInput
-                style={styles.input}
+                style={alert ? styles.inputAlert : styles.input}
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={surname}
@@ -84,7 +84,7 @@ function CreateProfile({navigation}){
                 
                 <Text style={styles.textLabel}>NickName: </Text>
                 <TextInput
-                style={styles.input}
+                style={alert ? styles.inputAlert : styles.input}
                 placeholder="Digite aqui..."
                 placeholderTextColor="#A4A4A4"
                 value={nickName}
@@ -93,7 +93,7 @@ function CreateProfile({navigation}){
                 
                 <Text style={styles.textLabel}>Idade: </Text>
                 <TextInput
-                style={styles.AgeInput}
+                style={alert ? styles.AgeInputAlet : styles.AgeInput}
                 placeholder="+16"
                 placeholderTextColor="#A4A4A4"
                 value={age}
