@@ -42,6 +42,7 @@ export default function Home({navigation}) {
 
   return (
     <View style={styles.Container}>
+        <Header/>
         <ScrollView style={styles.feed}>
           <Feed avatar={isis} post={cod} name={"Ana Claudia"} caption={"Jogo maravilhoso!"} Profile={UserProfile}/>
           <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>

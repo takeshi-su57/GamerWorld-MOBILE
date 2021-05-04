@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native'
 import styles from './styles'
 import { LinearGradient } from 'expo-linear-gradient'
+import Header from '../../components/header'
 
 import img from '../../utils'
 
@@ -36,6 +37,7 @@ function CreateProfile({navigation}){
 
     return(
         <View style={styles.Container}>
+            <Header/>
             {   alert &&
                 <LinearGradient
                     colors={['rgba(231, 91, 173, 0.7)', 'transparent']}

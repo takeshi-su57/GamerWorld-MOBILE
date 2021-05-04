@@ -10,6 +10,7 @@ import {
         ScrollView
 } from 'react-native'
 
+import Header from '../../components/header'
 import { LinearGradient } from 'expo-linear-gradient'
 import styles from './styles'
 import gamer from '../../assets/gamerWomanMan.png'
@@ -28,6 +29,7 @@ function Login({navigation}){
 
     return(
         <ScrollView contentContainerStyle={styles.Container}>
+            <Header/>
             {   alert &&
                 <LinearGradient
                     colors={['rgba(231, 91, 173, 0.7)', 'transparent']}

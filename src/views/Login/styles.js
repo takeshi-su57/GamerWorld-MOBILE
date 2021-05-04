@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',    
     },
     textLinkPurple:{
-        color: '#00BFFF',
+        color: '#B40486',
         fontSize: 23,
         fontWeight: 'bold',
         fontStyle: 'italic',

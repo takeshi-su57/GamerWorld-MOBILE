@@ -1,12 +1,20 @@
 import React from 'react'
 import { View, Image, TouchableOpacity, StyleSheet} from 'react-native'
 
+import logo from '../../assets/logoPurple.png'
+import sunny from '../../assets/sunny.png'
+import qrcode from '../../assets/qrcode.png'
+
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-function Header({back, body, bcgd, time, qrcode, logo}){
+function Header({back, arrowLeft}){
     return(
-        <View style={[styles.Container, body]}>
-            {
+        <View style={styles.Container}>
+            {   back ?
+                <TouchableOpacity onPress={back}>
+                    <Image source={arrowLeft} style={styles.Icon}/>
+                </TouchableOpacity>
+                :
                 <TouchableOpacity onPress={back}>
                     <Image source={qrcode} style={styles.Icon}/>
                 </TouchableOpacity>
@@ -14,15 +22,22 @@ function Header({back, body, bcgd, time, qrcode, logo}){
         
             <Image source={logo} style={styles.Logo}/>
             
-            <TouchableOpacity onPress={bcgd}>
-                <Image source={time} style={styles.Icon}/>
+            <TouchableOpacity>
+                <Image source={sunny} style={styles.Icon}/>
             </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    Container:{
+    Container:{ 
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        padding: 20,
+        width: '100%',
+        borderBottomWidth: 5,
+        borderBottomColor: '#B40486',
         marginTop: getStatusBarHeight(),
     },
     Logo:{

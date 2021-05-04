@@ -3,7 +3,6 @@ import { View, Text, Image, TouchableOpacity, ScrollView} from 'react-native'
 import styles from './styles'
 
 import Header from '../../components/header'
-import Navigation from '../../components/Navigation'
 
 import Avatar from '../../assets/isis.png'
 import customer from '../../assets/customer.png'
@@ -34,6 +33,7 @@ function UserProfile({navigation}){
 
     return(
         <View style={styles.Container}>
+            <Header back={Back} arrowLeft={arrowLeft}/>
                 <ScrollView style={styles.ContainerScrollView}>
                     <View style={styles.ContainerAvatar}>
                         <Image style={styles.avatar} source={Avatar}/>
