@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Text, View, ScrollView } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { View, ScrollView, Text } from 'react-native'
 
 import Header from '../../components/header'
 import Navigation from '../../components/Navigation'
@@ -14,9 +14,12 @@ import forza from '../../assets/forza.jpg'
 import hermione from '../../assets/hermione.png'
 import handson from '../../assets/handsonGearOfWar.jpeg'
 
+import Load from '../../components/load'
+
 import styles from './styles'
 
 export default function Home({navigation}) {
+  const[load, SetLoad] = useState(true)
 
   function UserProfile(){
     navigation.navigate('UserProfile')
@@ -39,24 +42,39 @@ export default function Home({navigation}) {
   function handleActivity(){
     navigation.navigate('Activity')
   }
+  
+  const[numero, setNumero] = useState(0)
+
+  useEffect(() => {
+    SetLoad(false)
+  }, [])
 
   return (
-    <View style={styles.Container}>
-        <Header/>
-        <ScrollView style={styles.feed}>
-          <Feed avatar={isis} post={cod} name={"Ana Claudia"} caption={"Jogo maravilhoso!"} Profile={UserProfile}/>
-          <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>
-          <Feed avatar={hermione} post={handson} name={"Erika Souza"} caption={"Hadson <3"}/>
-        </ScrollView>
+    <>
+      { load == true ? 
+      <View style={styles.ContainerLoad}>
+        <Load/>
+      </View>
+        :
+        <View style={styles.Container}>
+          <Header/>
+          <Text>{numero}</Text>
+          <ScrollView style={styles.feed}>
+            <Feed avatar={isis} post={cod} name={"Ana Claudia"} caption={"Jogo maravilhoso!"} Profile={UserProfile}/>
+            <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>
+            <Feed avatar={hermione} post={handson} name={"Erika Souza"} caption={"Hadson <3"}/>
+          </ScrollView>
 
-      <Navigation 
-        Home={handleHome} 
-        Post={handlePost}
-        Login={handleLogin}
-        Create={handleCreateProfile}  
-        Profile={handleProfile}
-        Activity={handleActivity}
-      />
-    </View>
+          <Navigation 
+            Home={handleHome} 
+            Post={handlePost}
+            Login={handleLogin}
+            Create={handleCreateProfile}  
+            Profile={handleProfile}
+            Activity={handleActivity}
+          />
+        </View>
+      }
+    </>
   )
 }

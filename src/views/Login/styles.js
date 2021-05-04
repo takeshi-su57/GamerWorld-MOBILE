@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 3,
     },
+    ContainerLoad:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+      },
     ContainerKeyboard:{
         flex: 1,
         alignItems: 'center',
@@ -39,7 +44,8 @@ const styles = StyleSheet.create({
         width: 300,
         height: 45,
         fontSize: 16,
-        paddingLeft: 15
+        paddingLeft: 15,
+        color: '#fff'
     },
     inputAlert:{
         borderRadius: 5,
@@ -49,7 +55,8 @@ const styles = StyleSheet.create({
         width: 300,
         height: 45,
         fontSize: 16,
-        paddingLeft: 15
+        paddingLeft: 15,
+        color: '#fff'
     },
     button:{
         alignItems: 'center',

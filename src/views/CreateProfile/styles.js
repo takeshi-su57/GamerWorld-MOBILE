@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
       fontSize: 16,
       borderWidth: 1,
       borderColor: '#fff',
+      color: '#fff'
     },
     AgeInputAlet:{
       backgroundColor: '#585858',
@@ -87,6 +88,7 @@ const styles = StyleSheet.create({
       fontSize: 16,
       borderWidth: 1,
       borderColor: '#B40486',
+      color: '#fff'
     },
     ContainerButton:{
       flexDirection: 'row',
