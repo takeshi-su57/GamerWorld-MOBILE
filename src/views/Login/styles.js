@@ -32,8 +32,20 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     input:{
+        borderWidth: 1,
+        borderColor: '#fff',
         borderRadius: 5,
-        backgroundColor: '#fff',
+        backgroundColor: '#585858',
+        width: 300,
+        height: 45,
+        fontSize: 16,
+        paddingLeft: 15
+    },
+    inputAlert:{
+        borderRadius: 5,
+        backgroundColor: '#585858',
+        borderWidth: 1,
+        borderColor: '#B40486',
         width: 300,
         height: 45,
         fontSize: 16,

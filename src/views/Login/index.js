@@ -45,9 +45,9 @@ function Login({navigation}){
                     <Image style={styles.img} source={gamer}/>
                     <Text style={styles.text}>NickName: </Text>
                     <TextInput 
-                        style={styles.input}
+                        style={alert ? styles.inputAlert : styles.input}
                         placeholder="Digite aqui..."
-                        placeholderTextColor="#585858"
+                        placeholderTextColor="#fff"
                         value={input}
                         onChange={setInput}
                     />
