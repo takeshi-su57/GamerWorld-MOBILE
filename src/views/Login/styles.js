@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
     Container:{
-     flex: 1,
-      alignItems: 'center'
+        flex: 1,
+        alignItems: 'center',
     },
     ContainerAlert:{
         width: '100%',
@@ -23,18 +23,19 @@ const styles = StyleSheet.create({
     ContainerKeyboard:{
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 10
     },
     img:{
-        width: 230,
-        height: 133,
+        width: 207,
+        height: 120,
     },
     text:{
         color: '#fff',
         fontSize: 19,
         fontWeight: 'bold',
-        marginTop: '8%',
-        marginBottom: 15
+        marginTop: 15,
+        marginBottom: 10
     },
     input:{
         borderWidth: 1,
@@ -68,13 +69,12 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff',
         borderRadius: 3,
-        marginTop: '10%',
-        marginBottom: '5%'
+        marginVertical: '10%',
     },
     ContainerCreateUser:{
        alignItems: 'center',
        flexDirection: 'row',
-       marginVertical: '10%',
+       marginBottom: 15
     },
     textLink:{
         color: '#fff',
