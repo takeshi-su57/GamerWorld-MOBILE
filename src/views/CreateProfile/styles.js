@@ -105,21 +105,10 @@ const styles = StyleSheet.create({
       borderColor: '#fff',
       borderRadius: 5,
       backgroundColor: '#8258FA',
-      width: 140,
-      height: 40,
-      marginRight: '11%'
-    },
-    GreenButton:{
-      alignItems: 'center',
-      justifyContent: 'center',
-
-      borderWidth: 1,
-      borderColor: '#fff',
-      borderRadius: 5,
-      backgroundColor: '#04B404',
-      width: 140,
+      width: '50%',
       height: 40,
     },
+   
     textButton:{
       color: '#fff',
       fontSize: 18,

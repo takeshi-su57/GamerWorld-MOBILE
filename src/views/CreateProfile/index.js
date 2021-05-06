@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import Header from '../../components/header'
 
 import img from '../../utils'
+import arrowLeft from '../../assets/arrowLeft.png'
 
 function CreateProfile({navigation}){
     const[name, setName] = useState()
@@ -35,9 +36,13 @@ function CreateProfile({navigation}){
         }
     }
 
+    function back(){
+        navigation.navigate('Login')
+    }
+
     return(
         <View style={styles.Container}>
-            <Header/>
+            <Header back={back} arrowLeft={arrowLeft}/>
             {   alert &&
                 <LinearGradient
                     colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
@@ -104,10 +109,6 @@ function CreateProfile({navigation}){
                 <View style={styles.ContainerButton}>
                     <TouchableOpacity style={styles.PurpleButton} onPress={Create}>
                         <Text style={styles.textButton}>Pronto</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.GreenButton} onPress={() => navigation.navigate('Login')}>
-                        <Text style={styles.textButton}>Cancelar</Text>
                     </TouchableOpacity>
                 </View>
             </View>
