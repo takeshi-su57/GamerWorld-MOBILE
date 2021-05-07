@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import styles from './styles'
 import gamer from '../../assets/gamerWomanMan.png'
 import Load from '../../components/load'
+import qrcode from '../../assets/qrcode.png'
 
 function Login({navigation}){
     const[input, setInput] = useState()
@@ -46,7 +47,7 @@ function Login({navigation}){
                 </View>
                 :
                 <ScrollView contentContainerStyle={styles.Container}>
-                    <Header qrcodeRouter={qrcodeRoute}/>
+                    <Header qrcode={qrcode} qrcodeRouter={qrcodeRoute}/>
                     {   alert &&
                         <LinearGradient
                             colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
