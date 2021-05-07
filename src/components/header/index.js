@@ -6,7 +6,7 @@ import sunny from '../../assets/sunny.png'
 
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-function Header({back, arrowLeft, qrcodeRouter, qrcode}){
+function Header({back, arrowLeft, qrcodeRouter, qrcodeImg}){
     return(
         <View style={styles.Container}>
             {   back ?
@@ -15,7 +15,7 @@ function Header({back, arrowLeft, qrcodeRouter, qrcode}){
                 </TouchableOpacity>
                 :
                 <TouchableOpacity onPress={qrcodeRouter}>
-                    <Image source={qrcode} style={styles.Icon}/>
+                    <Image source={qrcodeImg} style={styles.Icon}/>
                 </TouchableOpacity>
             }
         

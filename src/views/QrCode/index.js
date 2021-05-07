@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import Header from '../../components/header'
 import arrowLeft from '../../assets/arrowLeft.png'
@@ -17,7 +17,7 @@ export default function QrCode({navigation}){
     }
 
     function Home(){
-        navigation.navigate('Home')
+        Alert.alert("Código para sincronismo Web:", "123:456:789:10")
     }
 
     useEffect(() => {
@@ -30,6 +30,9 @@ export default function QrCode({navigation}){
     return (
         <View style={styles.container}>
             <Header back={back} arrowLeft={arrowLeft}/>
+            <View style={styles.containerTextHeader}>
+                <Text style={styles.textHeader}>Conectar com minha conta na web</Text>
+            </View>
             <View style={styles.containerCamer}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
@@ -38,7 +41,7 @@ export default function QrCode({navigation}){
                 <TouchableOpacity 
                     onPress={Home}
                     style={styles.ButtonScaner}>
-                    <Text style={styles.text}>Scanear</Text>
+                    <Text style={styles.text}>Scan</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -49,11 +52,20 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
     },
+    containerTextHeader:{
+        alignItems: 'center',
+        marginTop: 20
+    },
+    textHeader:{
+        color: "#fff",
+        fontSize: 20,
+        fontStyle: 'italic'
+    },  
     containerCamer:{
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: -40
+        marginTop: '-15%'
     },
     camera: {
         width: '90%',

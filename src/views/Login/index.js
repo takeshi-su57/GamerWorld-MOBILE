@@ -47,7 +47,7 @@ function Login({navigation}){
                 </View>
                 :
                 <ScrollView contentContainerStyle={styles.Container}>
-                    <Header qrcode={qrcode} qrcodeRouter={qrcodeRoute}/>
+                    <Header qrcodeImg={qrcode} qrcodeRouter={qrcodeRoute}/>
                     {   alert &&
                         <LinearGradient
                             colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
