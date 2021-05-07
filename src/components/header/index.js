@@ -7,7 +7,7 @@ import qrcode from '../../assets/qrcode.png'
 
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-function Header({back, arrowLeft}){
+function Header({back, arrowLeft, qrcodeRouter}){
     return(
         <View style={styles.Container}>
             {   back ?
@@ -15,7 +15,7 @@ function Header({back, arrowLeft}){
                     <Image source={arrowLeft} style={styles.Icon}/>
                 </TouchableOpacity>
                 :
-                <TouchableOpacity onPress={back}>
+                <TouchableOpacity onPress={qrcodeRouter}>
                     <Image source={qrcode} style={styles.Icon}/>
                 </TouchableOpacity>
             }

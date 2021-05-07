@@ -43,8 +43,6 @@ export default function Home({navigation}) {
     navigation.navigate('Activity')
   }
   
-  const[numero, setNumero] = useState(0)
-
   useEffect(() => {
     SetLoad(false)
   }, [])
@@ -58,7 +56,6 @@ export default function Home({navigation}) {
         :
         <View style={styles.Container}>
           <Header/>
-          <Text>{numero}</Text>
           <ScrollView style={styles.feed}>
             <Feed avatar={isis} post={cod} name={"Ana Claudia"} caption={"Jogo maravilhoso!"} Profile={UserProfile}/>
             <Feed avatar={batman} post={forza} name={"Henrique Jonas"} caption={"Bora jogar?"}/>

@@ -30,6 +30,10 @@ function Login({navigation}){
         }
     }
 
+    function qrcodeRoute(){
+        navigation.navigate('QrCode')
+    }
+
     useEffect(() => {
         SetLoad(false)
     }, [])
@@ -42,7 +46,7 @@ function Login({navigation}){
                 </View>
                 :
                 <ScrollView contentContainerStyle={styles.Container}>
-                    <Header/>
+                    <Header qrcodeRouter={qrcodeRoute}/>
                     {   alert &&
                         <LinearGradient
                             colors={['rgba(231, 91, 173, 0.7)', 'transparent']}

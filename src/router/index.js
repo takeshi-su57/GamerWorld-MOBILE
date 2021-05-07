@@ -8,6 +8,7 @@ import Post from '../views/Post'
 import UserProfile from '../views/UserProfile'
 import Profile from '../views/Profile'
 import Activity from '../views/Activity'
+import QrCode from '../views/QrCode'
 
 const Router = createAppContainer(
     createSwitchNavigator({
@@ -17,7 +18,8 @@ const Router = createAppContainer(
         Post,
         CreateProfile,
         Profile,
-        Activity
+        Activity,
+        QrCode
     })
 )
 
