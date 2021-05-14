@@ -16,6 +16,7 @@ import styles from './styles'
 import gamer from '../../assets/gamerWomanMan.png'
 import Load from '../../components/load'
 import qrcode from '../../assets/qrcode.png'
+import sunny from '../../assets/sunny.png'
 
 function Login({navigation}){
     const[input, setInput] = useState()
@@ -35,6 +36,10 @@ function Login({navigation}){
         navigation.navigate('QrCode')
     }
 
+    function info(){
+        navigation.navigate('Info')
+    }
+
     useEffect(() => {
         SetLoad(false)
     }, [])
@@ -47,7 +52,7 @@ function Login({navigation}){
                 </View>
                 :
                 <ScrollView contentContainerStyle={styles.Container}>
-                    <Header qrcodeImg={qrcode} qrcodeRouter={qrcodeRoute}/>
+                    <Header qrcodeImg={qrcode} qrcodeRouter={qrcodeRoute} info={info} sunny={sunny}/>
                     {   alert &&
                         <LinearGradient
                             colors={['rgba(231, 91, 173, 0.7)', 'transparent']}
