@@ -60,31 +60,16 @@ function UserProfile({navigation}){
                     <View style={styles.ContainerPost}>
                         <Image style={styles.ImgPost} source={cod}/>
                         <Text style={styles.TextCaption}>Jogo maravilhoso!</Text>
-
-                        <View style={styles.ContainerCommon}>
-                            <Image style={styles.ImgCommon} source={pen}/>
-                            <Image style={styles.ImgCommon} source={dlt}/>
-                        </View>
                     </View>
 
                     <View style={styles.ContainerPost}>
                         <Image style={styles.ImgPost} source={nfs}/>
                         <Text style={styles.TextCaption}>NFS quem topa jogar??</Text>
-
-                        <View style={styles.ContainerCommon}>
-                            <Image style={styles.ImgCommon} source={pen}/>
-                            <Image style={styles.ImgCommon} source={dlt}/>
-                        </View>
                     </View>
 
                     <View style={styles.ContainerPost}>
                         <Image style={styles.ImgPost} source={destiny}/>
                         <Text style={styles.TextCaption}>O melhor PVP</Text>
-
-                        <View style={styles.ContainerCommon}>
-                            <Image style={styles.ImgCommon} source={pen}/>
-                            <Image style={styles.ImgCommon} source={dlt}/>
-                        </View>
                     </View>
                 </ScrollView>
         </View>

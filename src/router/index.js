@@ -9,10 +9,12 @@ import UserProfile from '../views/UserProfile'
 import Profile from '../views/Profile'
 import Activity from '../views/Activity'
 import QrCode from '../views/QrCode'
+import Intro from '../views/Intro'
 import Info from '../views/Info'
 
 const Router = createAppContainer(
     createSwitchNavigator({
+        Intro,
         Info,
         Login,
         Home,

@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Image, TouchableOpacity, StyleSheet} from 'react-native'
 
-import logo from '../../assets/logoPurple.png'
+import logo from '../../assets/gamerInfo.png'
 
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-function Header({back, arrowLeft, qrcodeRouter, qrcodeImg, info, sunny}){
+function Header({back, arrowLeft, qrcodeRouter, qrcodeImg, Intro, sunny}){
     return(
         <View style={styles.Container}>
             {   back ?
@@ -20,7 +20,7 @@ function Header({back, arrowLeft, qrcodeRouter, qrcodeImg, info, sunny}){
         
             <Image source={logo} style={styles.Logo}/>
             
-            <TouchableOpacity onPress={info}>
+            <TouchableOpacity onPress={Intro}>
                 <Image source={sunny} style={styles.Icon}/>
             </TouchableOpacity>
         </View>
@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
         marginTop: getStatusBarHeight(),
     },
     Logo:{
-        width: 82,
-        height: 82
+        width: 90,
+        height: 90
     },
     Icon:{
         width: 37,

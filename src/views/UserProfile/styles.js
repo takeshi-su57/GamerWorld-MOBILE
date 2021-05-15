@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         margin: 5,
+        marginBottom: '10%'
     },
 
     ImgPost:{
